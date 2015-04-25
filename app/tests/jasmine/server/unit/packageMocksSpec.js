@@ -7225,7 +7225,7 @@ var packageMetadata = {
             },
             "connections": {
               "type": "constant",
-              "value": 0
+              "value": 1
             },
             "timeout": {
               "type": "constant",
@@ -9698,11 +9698,11 @@ var packageMetadata = {
                 },
                 "pid": {
                   "type": "constant",
-                  "value": 53227
+                  "value": 53300
                 },
                 "fout": {
                   "type": "constant",
-                  "value": 32
+                  "value": 31
                 },
                 "child": {
                   "type": "object",
@@ -9721,7 +9721,7 @@ var packageMetadata = {
                     },
                     "pid": {
                       "type": "constant",
-                      "value": 53227
+                      "value": 53300
                     },
                     "stdin": {
                       "type": "null",
