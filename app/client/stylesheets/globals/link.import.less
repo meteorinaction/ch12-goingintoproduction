@@ -3,8 +3,15 @@ a {
   color: @color-secondary;
   cursor: pointer;
   text-decoration: none;
-
-  &:hover { color: darken(@color-primary, 10%); }
-  &:active { color: @color-well; }
-  &:focus { outline:none; } //removes FF dotted outline
+  
+  &:hover {
+    color: darken(@color-primary, 10%);
+  }
+  &:active {
+    color: @color-well;
+  }
+  &:focus {
+    outline: none;
+  }
+  //removes FF dotted outline
 }

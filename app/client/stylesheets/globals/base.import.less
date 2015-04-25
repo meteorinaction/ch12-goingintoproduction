@@ -1,10 +1,15 @@
 * {
   .box-sizing(border-box);
-  -webkit-tap-highlight-color:rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent; // for some Androids
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  // for some Androids
 }
 
-html, button, input, textarea, select {
+html,
+button,
+input,
+textarea,
+select {
   outline: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,11 +18,16 @@ html, button, input, textarea, select {
 body {
   .type-regular;
   color: @color-full;
-  font-size: 16px; //this sets the baseline so we can use multiples of 4 & (r)ems
+  font-size: 16px;
+  //this sets the baseline so we can use multiples of 4 & (r)ems
 }
-
 // Default type layout
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   .type-regular;
   margin: 0;
   padding: 0;
@@ -55,7 +65,7 @@ p {
 
 sub,
 sup {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 sub {

@@ -10,7 +10,7 @@ Router.configure({
 
   // wait on the following subscriptions before rendering the page to ensure
   // the data it's expecting is present
-  waitOn: function() {
+  waitOn: function () {
     return [
       Meteor.subscribe('publicLists'),
       Meteor.subscribe('privateLists')
@@ -26,11 +26,15 @@ if (Meteor.isClient) {
   dataReadyHold = LaunchScreen.hold();
 
   // Show the loading screen on desktop
-  Router.onBeforeAction('loading', {except: ['join', 'signin']});
-  Router.onBeforeAction('dataNotFound', {except: ['join', 'signin']});
+  Router.onBeforeAction('loading', {
+    except: ['join', 'signin']
+  });
+  Router.onBeforeAction('dataNotFound', {
+    except: ['join', 'signin']
+  });
 }
 
-Router.map(function() {
+Router.map(function () {
   this.route('join');
   this.route('signin');
 
@@ -56,7 +60,7 @@ Router.map(function() {
 
   this.route('home', {
     path: '/',
-    action: function() {
+    action: function () {
       Router.go('listsShow', Lists.findOne());
     }
   });

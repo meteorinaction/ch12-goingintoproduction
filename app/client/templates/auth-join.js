@@ -1,20 +1,20 @@
 var ERRORS_KEY = 'joinErrors';
 
-Template.join.onCreated(function() {
+Template.join.onCreated(function () {
   Session.set(ERRORS_KEY, {});
 });
 
 Template.join.helpers({
-  errorMessages: function() {
+  errorMessages: function () {
     return _.values(Session.get(ERRORS_KEY));
   },
-  errorClass: function(key) {
+  errorClass: function (key) {
     return Session.get(ERRORS_KEY)[key] && 'error';
   }
 });
 
 Template.join.events({
-  'submit': function(event, template) {
+  'submit': function (event, template) {
     event.preventDefault();
     var email = template.$('[name=email]').val();
     var password = template.$('[name=password]').val();
@@ -22,11 +22,11 @@ Template.join.events({
 
     var errors = {};
 
-    if (! email) {
+    if (!email) {
       errors.email = 'Email required';
     }
 
-    if (! password) {
+    if (!password) {
       errors.password = 'Password required';
     }
 
@@ -42,9 +42,11 @@ Template.join.events({
     Accounts.createUser({
       email: email,
       password: password
-    }, function(error) {
+    }, function (error) {
       if (error) {
-        return Session.set(ERRORS_KEY, {'none': error.reason});
+        return Session.set(ERRORS_KEY, {
+          'none': error.reason
+        });
       }
 
       Router.go('home');
