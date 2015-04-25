@@ -1,0 +1,164 @@
+{
+  "format": "web-program-pre1",
+  "manifest": [
+    {
+      "path": "4378c057599f82141872bb6978f425d9d54e1b7f.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/4378c057599f82141872bb6978f425d9d54e1b7f.js",
+      "size": 434949,
+      "hash": "4378c057599f82141872bb6978f425d9d54e1b7f"
+    },
+    {
+      "path": "450764e8a75f3799cb20481d95af2c07dd9c2f4d.css",
+      "where": "client",
+      "type": "css",
+      "cacheable": true,
+      "url": "/450764e8a75f3799cb20481d95af2c07dd9c2f4d.css?meteor_css_resource=true",
+      "size": 24127,
+      "hash": "450764e8a75f3799cb20481d95af2c07dd9c2f4d"
+    },
+    {
+      "path": "app/apple-touch-icon-precomposed.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/apple-touch-icon-precomposed.png",
+      "size": 2222,
+      "hash": "9d9e446418108c4fa02acbfc496ca2dd45db90fc"
+    },
+    {
+      "path": "app/favicon.png",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/favicon.png",
+      "size": 1490,
+      "hash": "48fc4f8b1972842c8023a0cf2f8faf64d05ff922"
+    },
+    {
+      "path": "app/font/OpenSans-Light-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Light-webfont.eot",
+      "size": 29794,
+      "hash": "ed68cada8c4bfa00683942d9c87bf3cc34666522"
+    },
+    {
+      "path": "app/font/OpenSans-Light-webfont.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Light-webfont.svg",
+      "size": 56447,
+      "hash": "6f25974f01d4ee1355ac2bc406f7c12773b31077"
+    },
+    {
+      "path": "app/font/OpenSans-Light-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Light-webfont.ttf",
+      "size": 29612,
+      "hash": "d92b1bee5c22a1647396e951549f9771c6591fb4"
+    },
+    {
+      "path": "app/font/OpenSans-Light-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Light-webfont.woff",
+      "size": 19396,
+      "hash": "2cf63379bcba2127662f7bedb01ed0f7b82dcf0a"
+    },
+    {
+      "path": "app/font/OpenSans-Regular-webfont.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Regular-webfont.eot",
+      "size": 29934,
+      "hash": "c7ac4f61bc716a94362fbda76f5784ed3a17b61c"
+    },
+    {
+      "path": "app/font/OpenSans-Regular-webfont.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Regular-webfont.svg",
+      "size": 58495,
+      "hash": "61e2d9bace6b84c487668d196e628fca6a561245"
+    },
+    {
+      "path": "app/font/OpenSans-Regular-webfont.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Regular-webfont.ttf",
+      "size": 29744,
+      "hash": "1bda9f65b10d2b75b5b8049cd9107e6109112d7d"
+    },
+    {
+      "path": "app/font/OpenSans-Regular-webfont.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/font/OpenSans-Regular-webfont.woff",
+      "size": 19624,
+      "hash": "4e9fe179bbb4c898b4658ca4801e82d82c2f71cd"
+    },
+    {
+      "path": "app/icon/todos.eot",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/todos.eot",
+      "size": 6000,
+      "hash": "00b12bc24c938d690cf4f3d3013f8da6daec6f2b"
+    },
+    {
+      "path": "app/icon/todos.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/todos.svg",
+      "size": 17411,
+      "hash": "491b131a51a16f86fb689ddea516c04735db824d"
+    },
+    {
+      "path": "app/icon/todos.ttf",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/todos.ttf",
+      "size": 5844,
+      "hash": "b6c33e34f594d10609e9eab7f072be3ad325d863"
+    },
+    {
+      "path": "app/icon/todos.woff",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/icon/todos.woff",
+      "size": 5920,
+      "hash": "74d722b324c90b1b1632cdb13db9a62baac68aaf"
+    },
+    {
+      "path": "app/img/logo-todos.svg",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/img/logo-todos.svg",
+      "size": 4066,
+      "hash": "f09205164c463c61a7d0f075cf2f04fdf5c5d895"
+    },
+    {
+      "path": "head.html",
+      "where": "internal",
+      "type": "head",
+      "hash": "8668bfea5ccf94dc7ae40cda58c7fa7541ea745c"
+    }
+  ]
+}
