@@ -1,0 +1,95 @@
+#!/bin/bash
+#
+# description: Script to start a meteor application through forever
+# processname: forever/javascript/node
+# pidfile: /var/run/forever-initd-meteor.pid
+# logfile: /var/run/forever-initd-meteor.log
+#
+# Adjust the values for pidfile and logfile to have a unique name per meteor instance
+# Adjust the INIT INFO below if you plan to have multiple instances on the same machine
+# Change Provides as well as the short description
+#
+### BEGIN INIT INFO
+# Provides:      	meteor
+# Required-Start:	$remote_fs $syslog
+# Required-Stop: 	$remote_fs $syslog
+# Should-Start:  	$portmap
+# Should-Stop:   	$portmap
+# X-Start-Before:	nis
+# X-Stop-After:  	nis
+# Default-Start: 	2 3 4 5
+# Default-Stop:  	0 1 6
+# X-Interactive: 	true
+# Short-Description: Meteor Application
+# Description:   	This file should be used to construct scripts to be
+#                	placed in /etc/init.d.
+### END INIT INFO
+
+
+
+# Source function library.
+. /lib/lsb/init-functions
+
+
+pidfile=/var/run/forever-initd-meteor.pid
+logFile=/var/run/forever-initd-meteor.log
+errFile=/var/run/forever-initd-meteor.err
+outFile=/var/run/forever-initd-meteor.out
+
+# Change sourceDir to the root of your Meteor
+sourceDir=/var/www/meteor/app
+scriptId=$sourceDir/main.js
+
+start() {
+	echo "Starting $scriptId"
+
+	# This is found in the library referenced at the top of the script
+	start_daemon
+
+	# Notice that we change the PATH because on reboot
+	# the PATH does not include the path to node.
+	cd $sourceDir
+	PATH=/usr/local/bin:$PATH
+	PORT=3921 MONGO_URL=mongodb://user:password@localhost:27017/meteor ROOT_URL=http://mydb.host.example.org MAIL_URL=smtp://localhost:25 forever start --pidFile $pidfile -l $logFile -o $outFile -e $errFile -a -d --sourceDir $sourceDir/ main.js
+
+	RETVAL=$?
+}
+
+restart() {
+	echo -n "Restarting $scriptId"
+	/usr/local/bin/forever restart $scriptId
+	RETVAL=$?
+}
+
+stop() {
+	echo -n "Shutting down $scriptId"
+	/usr/local/bin/forever stop $scriptId
+	RETVAL=$?
+}
+
+status() {
+	echo -n "Status $scriptId"
+	/usr/local/bin/forever list
+	RETVAL=$?
+}
+
+
+case "$1" in
+	start)
+    	start
+    	;;
+	stop)
+    	stop
+    	;;
+	status)
+    	status
+    	;;
+	restart)
+    	restart
+    	;;
+	*)
+    	echo "Usage: {start|stop|status|restart}"
+    	exit 1
+    	;;
+esac
+exit $RETVAL
